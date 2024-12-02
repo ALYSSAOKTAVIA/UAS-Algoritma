@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+s = 30 # perpindahan benda sejauh 30 m
+
+# Definisi fungsi W
+def W(s):
+    return F*s 
+
+
+#Menampilkan grafik f(x) dan g(x)
+plt.plot(t, y, marker="o", color="b", linestyle="-")
+
+# Menambah Label 
+plt.title("Grafik Perpindahan")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.show()
