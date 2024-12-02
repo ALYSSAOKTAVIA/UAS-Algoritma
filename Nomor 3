@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+v0 = 50 # kecepatan awal sebesar 50 m/s
+g = 9.8
+
+# A grafik maksimum
+tmaks = v0 / g 
+t1 = np.linspace(0, tmaks, 100)
+h1 = v0 * t1 - 1/2 * g * t1**2
+
+plt.figure(figsize=(10,5))
+plt.subplot(1,2,1)
+#Menampilkan grafik f(x) dan g(x)
+plt.plot(t1, h1, marker="o", color="purple", linestyle="-")
+
+# Menambah Label 
+plt.title("Grafik Nomor 3")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.show()
