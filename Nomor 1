@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameter Pegas
+k = 60 # Konstanta pegas sebesar 60 N/m
+
+# Definisi fungsi F(x)
+def F(x):
+    return -k * x
+
+x = np.arange(0, 0.5, 0.02)
+
+# Menghitung nilai y untuk setiap nilai x
+y = F(x)
+
+#Menampilkan grafik f(x) dan g(x)
+plt.plot(x, y, marker="o", color="purple", linestyle="-", label="F(x) = -k * x")
+
+# Menambah Label 
+plt.title("Grafik Hukum Hooke")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.show()
