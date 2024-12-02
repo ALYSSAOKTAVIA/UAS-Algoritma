@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+# Parameter Pegas
+T = 10 # Periode benda dengan satuan sekon
+A = 5 # Amplitudo benda dengan satuan cm 
+
+# Mencari nilai omega
+omega = 1 / T 
+t = np.arange(0, 60, 50)
+
+sin_value = math.sin(omega * t)
+
+# Definisi fungsi F(x)
+def x(t):
+    return A * sin_value * (omega * t)
+
+# Menghitung nilai y untuk setiap nilai x
+y = x(t)
+
+#Menampilkan grafik f(x) dan g(x)
+plt.plot(t, y, marker="o", color="purple", linestyle="-")
+
+# Menambah Label 
+plt.title("Grafik GHS")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.show()
